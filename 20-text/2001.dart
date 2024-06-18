@@ -8,9 +8,8 @@ void main() {
         appBar: AppBar(
          ),
         body: Center(
-          child: Text.rich(
-            TextSpan(
-              text: "Hello World",
+          child: Text(
+            "Hello World",
               style: TextStyle(
                 color: Color.fromARGB(255, 88, 108, 221),
                 fontStyle: FontStyle.italic,
@@ -21,11 +20,13 @@ void main() {
                 decorationColor: Color.fromARGB(255, 240, 221, 51),
                 decorationThickness: 2,
               ),
+          ) 
+           
              
           
         ),
       ),
     )
-  )));
+  );
 }
 
