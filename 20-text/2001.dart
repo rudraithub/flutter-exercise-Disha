@@ -10,15 +10,15 @@ void main() {
         body: Center(
           child: Text.rich(
             TextSpan(
-              text: "Good Morning",
+              text: "Hello World",
               style: TextStyle(
-                color: Colors.pinkAccent,
-                fontStyle: FontStyle.normal,
+                color: Color.fromARGB(255, 88, 108, 221),
+                fontStyle: FontStyle.italic,
                 fontWeight: FontWeight.bold,
                 fontSize: 30,
+                backgroundColor: Color.fromARGB(255, 240, 122, 161),
                 decoration: TextDecoration.underline,
-                decorationStyle: TextDecorationStyle.wavy,
-                decorationColor: Color.fromARGB(255, 59, 54, 7),
+                decorationColor: Color.fromARGB(255, 240, 221, 51),
                 decorationThickness: 2,
               ),
              
