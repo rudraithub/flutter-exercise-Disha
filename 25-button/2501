@@ -1,0 +1,107 @@
+
+import 'package:flutter/material.dart';
+
+void main(){
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+      backgroundColor: Colors.black,
+      title: Text(
+        "Button Demo",
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+          color: Colors.white,
+        ),
+      ),
+        ),
+        body: Column(
+          children: [
+            Center(
+              child:
+               TextButton(
+                onPressed:(){
+              print("Press on Text Button");
+                }, 
+                
+                 child: Text("Text Button",
+                 style: TextStyle(
+                  color: Colors.green
+                 ),
+                 )),
+                  ),
+             SizedBox(
+              height: 20,
+            ),
+             ElevatedButton(
+                  onPressed:(){
+                    print("Press on Elevated Button");
+                  }, style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.orange,
+                    elevation: 10,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(3))
+                    )
+                  ),
+                   child: Text("Enabled",
+                   style: TextStyle(
+                    color: Color.fromARGB(255, 241, 242, 242),
+                   ),)),
+                   SizedBox(
+                    height: 20,
+                   ),
+                   OutlinedButton(
+                    onPressed:(){
+                      print("outline button");
+                    } ,
+                    style: OutlinedButton.styleFrom(
+                    backgroundColor: Colors.amber,
+                    side: BorderSide(width: 2),
+                    elevation: 10,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(6))
+                    )
+                   ),
+                     child: Text("Outline Button",
+                     style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                     ),)),
+                     SizedBox(
+                      height: 40,
+                     ),
+                     TextButton.icon(onPressed: (){},
+                     icon: Icon(Icons.star,
+                     size: 30,
+                    color: Colors.black,
+                    ), 
+                     label: Text(""),),
+                     SizedBox(
+                      height: 30,
+                     ),
+                      ElevatedButton(onPressed:(){
+                        print("FloatingactionButton");
+                      },
+                       style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 9, 65, 97),
+                    elevation: 30,
+                    
+                       ),
+                       child: Text("Floating Action Button",
+                       style: TextStyle(
+                        color: Colors.white,
+                       ),
+                       )),
+                    ],
+          ),
+       ),
+        )
+        );
+          
+        
+      
+    
+  
+}
+     
