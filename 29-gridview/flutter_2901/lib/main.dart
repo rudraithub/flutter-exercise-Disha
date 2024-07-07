@@ -66,10 +66,14 @@ class _grdState extends State<grd> {
                 ),
                 SizedBox(height: 660),
                 Container(
-                   padding: EdgeInsets.all(55),
-                  child:  Text('Click', style: TextStyle(fontSize: 20)),
+                  //  padding: EdgeInsets.all(55),
+                  // height: 50,
+                  // width: 50,
+                  child:  Text('Click', style: TextStyle(fontSize: 20),
+                  textAlign: TextAlign.center,),
                   // color: Color.fromARGB(255, 156, 28, 19),
                   decoration: BoxDecoration(shape: BoxShape.circle,
+                  
                   color: Colors.amber,
                   ),
                 )
