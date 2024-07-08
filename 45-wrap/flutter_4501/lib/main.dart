@@ -40,7 +40,7 @@ class WrapTextExample extends StatelessWidget {
             ),
           ),
           Container(
-            padding: EdgeInsets.all(12.0),
+            padding: EdgeInsets.all(12),
             child: Text(
               'Home Screen',
               style: TextStyle(color: Colors.black, fontSize: 27),
