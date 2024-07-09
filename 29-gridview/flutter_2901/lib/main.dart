@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -47,35 +48,40 @@ class _grdState extends State<grd> {
                 Container(
                   padding:  EdgeInsets.all(50),
                   child:  Text('Item 1', style: TextStyle(fontSize: 20)),
-                  color: Colors.red,
+                  color: Colors.pink,
                 ),
                 Container(
                   padding:  EdgeInsets.all(50),
                   child:  Text('Item 2', style: TextStyle(fontSize: 20)),
-                  color: Colors.green,
+                  color: Colors.blueGrey,
                 ),
                 Container(
                   padding:  EdgeInsets.all(50),
                   child:  Text('Item 3', style: TextStyle(fontSize: 20)),
-                  color: Colors.blue,
+                  color: Colors.amber,
                 ),
                 Container(
                   padding: EdgeInsets.all(50),
                   child: Text('Item 4', style: TextStyle(fontSize: 20)),
-                  color: Colors.orange,
+                  color: Colors.purple,
                 ),
                 SizedBox(height: 660),
-                Container(
-                  //  padding: EdgeInsets.all(55),
-                  // height: 50,
-                  // width: 50,
-                  child:  Text('Click', style: TextStyle(fontSize: 20),
-                  textAlign: TextAlign.center,),
-                  // color: Color.fromARGB(255, 156, 28, 19),
-                  decoration: BoxDecoration(shape: BoxShape.circle,
-                  
-                  color: Colors.amber,
-                  ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Container(
+                      height: 100,
+                      width: 100,
+                      child:  Center(
+                        child: Text('Click', style: TextStyle(fontSize: 20),
+                        textAlign: TextAlign.center,),
+                      ),
+                      decoration: BoxDecoration(shape: BoxShape.circle,
+                      
+                      color: Colors.red,
+                      ),
+                    ),
+                  ],
                 )
               ],
             ),
