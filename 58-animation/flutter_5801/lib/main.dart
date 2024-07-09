@@ -29,7 +29,7 @@ class _animiState extends State<animi> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Animated Container Demo'),
+        title: Text('Animation Demo'),
       ),
       body: GestureDetector(
         onTap: () {
@@ -39,13 +39,12 @@ class _animiState extends State<animi> {
         },
         child: Center(
           child: AnimatedContainer(
-            width: selected? 250 : 500,
-            height: selected? 250 : 500,
-            color: selected? Colors.red : Colors.blue,
+            width: selected? 150 : 250,
+            height: selected? 150 : 250,
+            color: selected? Colors.blue : Colors.blue,
             alignment: selected? Alignment.center : Alignment.center,
             duration: Duration(seconds: 10),
-            child: Text(selected? "Not Expanded": "Expanded",style: TextStyle(color: Colors.white,
-             fontWeight: FontWeight.bold,
+            child: Text(selected? "Tap to expand/collapse ": "Tap to return",style: TextStyle(color: Colors.white,
              fontSize: 22),),
             curve: Curves.fastLinearToSlowEaseIn,
             ),
