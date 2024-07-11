@@ -25,15 +25,16 @@ class dk extends StatefulWidget {
 
 class _dkState extends State<dk> {
   DateTime dte= DateTime.now();
-  DateTime dte2= DateTime.now();
+  TimeOfDay tme= TimeOfDay.now();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.yellow,
+        backgroundColor: Colors.black,
         title: Text("Datepicker Examples",
         style: TextStyle(
-          fontWeight: FontWeight.bold
+          fontWeight: FontWeight.bold,
+          color: Colors.white
         ),),
        ),
        body: Center(
@@ -64,25 +65,25 @@ class _dkState extends State<dk> {
 
             SizedBox(height: 40,),
 
-            ElevatedButton.icon(onPressed:()async{
-            final DateTime? dateTime= await showDatePicker(
-              context: context, 
-              firstDate: DateTime(1998), 
-              lastDate: DateTime(2040));
+             OutlinedButton.icon(onPressed:()async{
+             final TimeOfDay? timeOfDay= await showTimePicker(context: context, 
+             initialTime: TimeOfDay(hour: 24, minute:24) );
               setState(() {
-                dte2= dateTime!;
+               tme=timeOfDay!;
               });
           }, 
-             style: ElevatedButton.styleFrom(
+           style: ElevatedButton.styleFrom(
               backgroundColor: Color.fromARGB(255, 117, 213, 230),
                shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
               ),
              ),
-          icon: Icon(Icons.calendar_month), 
-          label:Text("    ")
-           ),
-            Text("${dte2.day}-${dte2.month}-${dte2.year}"),
+          icon:Icon(Icons.lock_clock), 
+          label: Text("   ")),
+          Text("${tme.hour}:${tme.minute}",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+            ),),
            ],
            
         ),
